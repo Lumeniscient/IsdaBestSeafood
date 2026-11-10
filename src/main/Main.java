@@ -1,6 +1,7 @@
 
 import models.manageInventory;
 import models.product;
+import models.Orders;
 
 public class Main {
 
@@ -15,6 +16,7 @@ public class Main {
       inventory.removeProduct("Tilapia");
       System.out.println(inventory.getInventory());
       inventory.searchProduct("Sushi");
+
     }
 
 }

@@ -1,51 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="632.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" prefHeight="500.0" prefWidth="200.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: black;" styleClass="bg color">
-               <children>
-                  <Circle fill="#244b6f" layoutX="51.0" layoutY="43.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="33.0" layoutY="17.0" text="IB" textFill="WHITE">
-                     <font>
-                        <Font name="Noto Sans Condensed ExtraBold" size="36.0" />
-                     </font>
-                     <graphic>
-                        <AmbientLight lightOn="true">
-                           <color>
-                              <Color green="0.9022945165634155" blue="1.0" />
-                           </color>
-                        </AmbientLight>
-                     </graphic></Label>
-               </children></AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: light grey;" />
-        </items>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
+      <Pane prefHeight="632.0" prefWidth="254.0" style="-fx-background-color: #00203F;">
          <effect>
-            <Lighting>
-               <bumpInput>
-                  <ColorAdjust brightness="-0.55" contrast="-0.24" hue="0.05" saturation="0.05" />
-               </bumpInput>
-               <light>
-                  <Light.Distant />
-               </light>
-            </Lighting>
+            <ColorAdjust brightness="0.19" />
          </effect>
-         <VBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </VBox.margin>
-      </SplitPane>
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="6.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <HBox layoutX="22.0" layoutY="123.0" prefHeight="63.0" prefWidth="210.0" style="-fx-background-color: #00ffad; -fx-background-radius: 25;" />
+            <Label layoutX="93.0" layoutY="35.0" text="IsdaBestSeafood" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="106.0" layoutY="61.0" text="POS and Ordering System" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="11.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="254.0" prefHeight="632.0" prefWidth="852.0" style="-fx-background-color: #ADEFD1;">
+         <effect>
+            <ColorAdjust />
+         </effect></Pane>
    </children>
-</VBox>
+</AnchorPane>

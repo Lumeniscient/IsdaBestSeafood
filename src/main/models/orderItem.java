@@ -13,7 +13,7 @@ public class orderItem {
         return quantity;
     }
 
-    orderItem(product orderProduct, int quantity){
+    public orderItem(product orderProduct, int quantity){
         this.orderProduct = orderProduct;
         this.quantity = quantity;
     }
