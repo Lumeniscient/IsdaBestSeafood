@@ -1,41 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="632.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Pane prefHeight="632.0" prefWidth="254.0" style="-fx-background-color: #00203F;">
-         <effect>
-            <ColorAdjust brightness="0.19" />
-         </effect>
-         <children>
-            <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="6.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../icon.png" />
-               </image>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
-            </ImageView>
-            <HBox layoutX="22.0" layoutY="123.0" prefHeight="63.0" prefWidth="210.0" style="-fx-background-color: #00ffad; -fx-background-radius: 25;" />
-            <Label layoutX="93.0" layoutY="35.0" text="IsdaBestSeafood" textFill="WHITE">
-               <font>
-                  <Font name="Bell MT" size="22.0" />
-               </font>
-            </Label>
-            <Label layoutX="106.0" layoutY="61.0" text="POS and Ordering System" textFill="WHITE">
-               <font>
-                  <Font name="Bell MT" size="11.0" />
-               </font>
-            </Label>
-         </children></Pane>
-      <Pane layoutX="254.0" prefHeight="632.0" prefWidth="852.0" style="-fx-background-color: #ADEFD1;">
-         <effect>
-            <ColorAdjust />
-         </effect></Pane>
-   </children>
-</AnchorPane>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+
+</VBox>
