@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="500.0" prefWidth="200.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: black;" styleClass="bg color">
+               <children>
+                  <Circle fill="#244b6f" layoutX="51.0" layoutY="43.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="33.0" layoutY="17.0" text="IB" textFill="WHITE">
+                     <font>
+                        <Font name="Noto Sans Condensed ExtraBold" size="36.0" />
+                     </font>
+                     <graphic>
+                        <AmbientLight lightOn="true">
+                           <color>
+                              <Color green="0.9022945165634155" blue="1.0" />
+                           </color>
+                        </AmbientLight>
+                     </graphic></Label>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: light grey;" />
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <ColorAdjust brightness="-0.55" contrast="-0.24" hue="0.05" saturation="0.05" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </SplitPane>
+   </children>
+</VBox>
