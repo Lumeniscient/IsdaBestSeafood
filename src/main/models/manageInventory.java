@@ -1,5 +1,7 @@
 package models;
 import java.util.ArrayList;
+import java.util.Comparator;
+
 import models.product;
 
 public class manageInventory {
@@ -11,6 +13,14 @@ public class manageInventory {
     // adds a product in the inventory
     public void addProduct(product f){
         inventory.add(f);
+
+        // sorts the inventory by name
+        inventory.sort(new Comparator<product>() {
+            @Override
+            public int compare(product a, product b) {
+                return a.getProductName().compareToIgnoreCase(b.getProductName());
+            }
+        });
     }
 
     // removes/deletes a product in the inventory

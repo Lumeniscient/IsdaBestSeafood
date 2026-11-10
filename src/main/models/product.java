@@ -1,7 +1,7 @@
 package models;
 
 public class product {
-    private int productId = 100, productStock;
+    private int productId = 1, productStock;
     private String productName;
     private double productPrice;
     public int getProductId() {
