@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loginController">
    <children>
       <VBox prefHeight="121.0" prefWidth="400.0">
          <children>
@@ -30,7 +30,7 @@
                   <Font name="Arial Black" size="15.0" />
                </font>
             </Label>
-            <TextField prefHeight="30.0" prefWidth="294.0" promptText="E-mail">
+            <TextField fx:id="txtUsername" prefHeight="30.0" prefWidth="294.0" promptText="Username">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -38,7 +38,7 @@
                   <Insets left="25.0" right="25.0" />
                </VBox.margin>
             </TextField>
-            <TextField layoutX="35.0" layoutY="58.0" prefHeight="30.0" prefWidth="350.0" promptText="Password">
+            <TextField fx:id="txtPassword" accessibleRole="PASSWORD_FIELD" layoutX="35.0" layoutY="58.0" prefHeight="30.0" prefWidth="350.0" promptText="Password">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -46,7 +46,7 @@
                   <Insets left="25.0" right="25.0" top="5.0" />
                </VBox.margin>
             </TextField>
-            <Button mnemonicParsing="false" prefHeight="19.0" prefWidth="350.0" style="-fx-background-color: skyblue;" text="Login" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#handleLogin" prefHeight="19.0" prefWidth="350.0" style="-fx-background-color: skyblue;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>

@@ -1,22 +1,27 @@
 
-import models.manageInventory;
-import models.product;
-import models.Orders;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
+import java.util.Objects;
 
-public class Main {
+
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) {
+        try {
+            stage.setTitle("Login");
+            stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("/app/login.fxml"))));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public static void main(String[] args){
-      manageInventory inventory = new manageInventory();
-
-      inventory.addProduct(new product("Bangrus", 55.2, 32));
-      inventory.addProduct(new product("Tilapia", 39.49, 21));
-      inventory.addProduct(new product("Sushi", 25, 322));
-
-      System.out.println(inventory.getInventory());
-      inventory.removeProduct("Tilapia");
-      System.out.println(inventory.getInventory());
-      inventory.searchProduct("Sushi");
-
+        launch();
     }
 
 }

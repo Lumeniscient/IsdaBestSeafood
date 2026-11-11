@@ -9,7 +9,9 @@ public class Orders {
 
     private ArrayList<orderItem> items = new ArrayList<>();
 
-    public ArrayList<orderItem>
+    public ArrayList<orderItem> getOrders(){
+        return items;
+    }
 
 
 }
