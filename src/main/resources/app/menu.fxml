@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(255 255 255 / 0);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane layoutY="-14.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="732.0" prefWidth="295.0" style="-fx-background-color: #0f3b6c; -fx-background-radius: 15 0 0 15;" AnchorPane.topAnchor="-14.0">
+            <children>
+                <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icon.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="1.0" />
+                    </effect>
+                </ImageView>
+                <Label layoutX="94.0" layoutY="39.0" text="IsdaBestSeafood" textFill="WHITE">
+                    <font>
+                        <Font name="Inter Semi Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label layoutX="117.0" layoutY="66.0" text="POS and Ordering System" textFill="WHITE">
+                    <font>
+                        <Font name="Inter Italic" size="11.0" />
+                    </font>
+                </Label>
+                <VBox layoutX="15.0" layoutY="111.0" prefHeight="157.0" prefWidth="266.0">
+                    <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="267.0" style="-fx-background-color: #00ffad; -fx-background-radius: 15; -fx-cursor: HAND;" text="  Dashboard">
+                            <font>
+                                <Font name="Berlin Sans FB" size="19.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../dashboard_icon.png" />
+                                    </image></ImageView>
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="266.0" style="-fx-background-color: #00ffad; -fx-background-radius: 15; -fx-cursor: HAND;" text="  New Order">
+                            <font>
+                                <Font name="Inter Semi Bold" size="19.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../new_order_icon.png" />
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+                <Button layoutY="676.0" mnemonicParsing="false" style="-fx-background-color: tramsparent;" text="Log out" textFill="WHITE">
+                    <font>
+                        <Font name="Inter Regular" size="22.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../log_out_icon.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            <VBox layoutX="15.0" layoutY="237.0" prefHeight="200.0" prefWidth="266.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="51.0" prefWidth="266.0" style="-fx-background-color: #00ffad; -fx-background-radius: 15; -fx-cursor: HAND;" text="Menu">
+                     <font>
+                        <Font name="Inter Semi Bold" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../new_order_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            </children></Pane>
+        <Pane layoutX="295.0" prefHeight="732.0" prefWidth="1021.0" style="-fx-background-color: #ADEFD1; -fx-background-radius: 0 15 15 0;">
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <children>
+                <VBox layoutX="27.0" layoutY="14.0">
+                    <children>
+                        <Label prefHeight="34.0" prefWidth="222.0" text="Menu">
+                            <font>
+                                <Font name="Berlin Sans FB" size="38.0" />
+                            </font>
+                        </Label>
+                        <Label text="Wednesday, November 11, 2026">
+                            <font>
+                                <Font name="Inter Semi Bold" size="15.0" />
+                            </font></Label>
+                    </children>
+                </VBox>
+                <Button layoutX="964.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0f3b6c; -fx-background-radius: 5;" text="×" textFill="WHITE">
+                    <font>
+                        <Font name="Inter Semi Bold" size="18.0" />
+                    </font>
+                </Button>
+            <VBox layoutX="28.0" layoutY="106.0" prefHeight="598.0" prefWidth="953.0">
+               <children>
+                  <TableView prefHeight="603.0" prefWidth="953.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Menu item" />
+                      <TableColumn prefWidth="75.0" text="Category" />
+                        <TableColumn prefWidth="75.0" text="Price" />
+                        <TableColumn prefWidth="75.0" text="Availability" />
+                        <TableColumn prefWidth="75.0" text="Actions" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children></VBox>
+            <Label alignment="CENTER" layoutX="853.0" layoutY="61.0" prefHeight="28.0" prefWidth="111.0" style="-fx-background-color: #0f3b6c; -fx-background-radius: 15;" text="+ Add Menu Item" textFill="WHITE" />
+            </children></Pane>
+    </children>
+</AnchorPane>
