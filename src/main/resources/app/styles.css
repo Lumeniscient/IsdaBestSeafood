@@ -1,0 +1,10 @@
+.button {
+    -fx-background-color: #00ffad;
+    -fx-background-radius: 15;
+}
+
+
+.button:hover {
+    -fx-background-color: derive(#00ffad, -10%);
+    -fx-cursor: hand;
+}

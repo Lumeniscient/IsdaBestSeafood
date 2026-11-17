@@ -13,6 +13,8 @@ public class Main extends Application {
         try {
             stage.setTitle("Login");
             stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("/app/login.fxml"))));
+            stage.setResizable(false);
+            stage.centerOnScreen();
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
