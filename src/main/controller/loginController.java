@@ -18,7 +18,7 @@ public class loginController {
 
     @FXML
     public void initialize(){
-        btnLogin.setOnMousePressed(e -> btnLogin.setStyle("-fx-background-color: derive(#00ffad, -20%);; -fx-background-radius: 15;"));
+        btnLogin.setOnMousePressed(e -> btnLogin.setStyle("-fx-background-color: derive(#00ffad, -30%);; -fx-background-radius: 15;"));
         btnLogin.setOnMouseReleased(e -> btnLogin.setStyle(""));
     }
 

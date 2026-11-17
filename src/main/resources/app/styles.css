@@ -5,6 +5,6 @@
 
 
 .button:hover {
-    -fx-background-color: derive(#00ffad, -10%);
+    -fx-background-color: derive(#00ffad, -20%);
     -fx-cursor: hand;
 }
