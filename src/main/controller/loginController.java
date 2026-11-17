@@ -1,15 +1,11 @@
 package controller;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import models.user;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import models.userAdmin;
 import models.userStaff;
 
@@ -18,6 +14,13 @@ import java.io.IOException;
 
 public class loginController {
     @FXML private TextField txtUsername, txtPassword;
+    @FXML private Button btnLogin;
+
+    @FXML
+    public void initialize(){
+        btnLogin.setOnMousePressed(e -> btnLogin.setStyle("-fx-background-color: derive(#00ffad, -20%);; -fx-background-radius: 15;"));
+        btnLogin.setOnMouseReleased(e -> btnLogin.setStyle(""));
+    }
 
 
     @FXML
