@@ -15,7 +15,7 @@ public class userAdmin extends user{
     public void accessDashboard(Stage stage) throws IOException {
         stage.setTitle("Admin Dashboard");
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(userAdmin.class.getResource("/app/adminDashboard.fxml")))));
-        //stage.setFullScreen(true);
+        stage.centerOnScreen();
         stage.show();
     }
 

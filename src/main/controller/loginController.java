@@ -11,6 +11,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import models.userAdmin;
+import models.userStaff;
+
 import java.io.IOException;
 
 
@@ -26,6 +28,9 @@ public class loginController {
         if (username.equals("Admin") && password.equals("A123")) {
             user admin = new userAdmin(username, password);
             admin.accessDashboard(stage);
+        } else if (username.equals("Staff") && password.equals("S123")) {
+            user staff = new userStaff(username, password);
+            staff.accessDashboard(stage);
         }
     }
 }
