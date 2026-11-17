@@ -6,7 +6,6 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(255 255 255 / 0);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
@@ -103,176 +102,27 @@
                             </font></Label>
                     </children>
                 </VBox>
-                <Pane layoutX="20.0" layoutY="167.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-                    <children>
-                        <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="79.0" text="Calamares!">
-                            <font>
-                                <Font name="Berlin Sans FB" size="14.0" />
-                            </font>
-                        </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" prefHeight="21.0" prefWidth="48.0" text="₱ 389">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-                  <Label layoutX="87.0" layoutY="18.0" text="★" textFill="#bc1010" />
-                    </children></Pane>
                 <Button layoutX="964.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0f3b6c; -fx-background-radius: 5;" text="×" textFill="WHITE">
                     <font>
                         <Font name="Inter Semi Bold" size="18.0" />
                     </font>
                 </Button>
-            <Pane layoutX="27.0" layoutY="324.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="93.0" text="Adobong Pusit!">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" text="₱ 289">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-               </children>
-            </Pane>
-            <Pane layoutX="27.0" layoutY="486.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="106.0" text="Tinola? (Bang!us)">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" prefHeight="21.0" prefWidth="52.0" text="₱ 289">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-                  <Label layoutX="120.0" layoutY="20.0" text="★" textFill="#bc1010" />
-               </children>
-            </Pane>
-            <Pane layoutX="363.0" layoutY="167.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" text="Sizzling Bangus!">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" text="₱ 280">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-               </children>
-            </Pane>
-            <Pane layoutX="363.0" layoutY="324.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="79.0" text="Talaba!">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" text="₱ 189">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-               </children>
-            </Pane>
-            <Pane layoutX="363.0" layoutY="486.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="106.0" text="Buttered Shrimp!">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" prefHeight="21.0" prefWidth="48.0" text="₱ 289">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-                  <Label layoutX="118.0" layoutY="18.0" text="★" textFill="#bc1010" />
-               </children>
-            </Pane>
-            <Pane layoutX="705.0" layoutY="167.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="79.0" text="King Crab!">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" text="₱ 589">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-               </children>
-            </Pane>
-            <Pane layoutX="705.0" layoutY="324.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="117.0" text="Dugong! (EXOTIC)">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" text="₱ 1000">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-               </children>
-            </Pane>
-            <Pane layoutX="705.0" layoutY="486.0" prefHeight="100.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 15;">
-               <children>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="117.0" text="Sea Food Bowl!!!">
-                     <font>
-                        <Font name="Berlin Sans FB" size="14.0" />
-                     </font>
-                  </Label>
-                  <Ellipse fill="#1fffc4" layoutX="243.0" layoutY="28.0" radiusX="39.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="217.0" layoutY="19.0" prefHeight="17.0" prefWidth="48.0" text="Available" />
-                  <Label layoutX="24.0" layoutY="69.0" text="₱ 889">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="209.0" layoutY="69.0" prefHeight="25.0" prefWidth="23.0" />
-                  <Button alignment="CENTER_RIGHT" layoutX="248.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #0f3b6c;" text="+" textFill="WHITE" />
-                  <Label layoutX="119.0" layoutY="18.0" text="★" textFill="#bc1010" />
-               </children>
-            </Pane>
+            <TableView layoutX="60.0" layoutY="100.0" prefHeight="485.0" prefWidth="869.0" style="-fx-background-radius: 10;">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Food Name" />
+                <TableColumn prefWidth="75.0" text="Price ₱" />
+                  <TableColumn prefWidth="75.0" text="Stock" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField layoutX="60.0" layoutY="607.0" prefHeight="25.0" prefWidth="205.0" promptText="Food Name" style="-fx-background-radius: 10;" />
+            <TextField layoutX="285.0" layoutY="607.0" prefHeight="25.0" prefWidth="205.0" promptText="Price ₱" style="-fx-background-radius: 10;" />
+            <TextField layoutX="511.0" layoutY="607.0" prefWidth="205.0" promptText="Stock" style="-fx-background-radius: 10;" />
+            <Button layoutX="731.0" layoutY="607.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #0f3b6c; -fx-background-radius: 10;" text="Add Order" textFill="WHITE" />
+            <TextField layoutX="60.0" layoutY="656.0" prefHeight="25.0" prefWidth="266.0" promptText="quantity sales" style="-fx-background-radius: 10;" />
+            <Button layoutX="349.0" layoutY="656.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #0f3b6c; -fx-background-radius: 10;" text="Confirm Order" textFill="WHITE" />
             </children></Pane>
     </children>
 </AnchorPane>
