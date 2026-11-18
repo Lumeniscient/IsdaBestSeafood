@@ -39,13 +39,10 @@ public class manageInventory {
     }
 
     // adding updateProduct() soon....
-    public void updateProduct(String prodName, double prodPrice, int prodStock){
-        ArrayList<product> a = inventory;
-
-        int nameIndex = inventory.indexOf(prodName);
-        int priceIndex = inventory.indexOf(prodPrice);
-        int stockIndex = inventory.indexOf(prodStock);
-
+    public void updateProduct(product update, String name, double prodPrice, int prodStock){
+        update.setProductName(name);
+        update.setProductPrice(prodPrice);
+        update.setStock(prodStock);
     }
 
     // search product using binary search (halin sa DataStruc BST)

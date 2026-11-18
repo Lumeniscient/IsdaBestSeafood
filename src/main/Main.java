@@ -6,21 +6,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-import models.manageInventory;
-import models.product;
 
 public class Main extends Application {
     @Override
-    public void start(Stage stage) {
-        try {
+    public void start(Stage stage)  throws Exception {
             stage.setTitle("Login");
-            stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("/app/menu.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("/app/login.fxml"))));
             stage.setResizable(false);
             stage.centerOnScreen();
             stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
     }
 

@@ -3,6 +3,9 @@
     -fx-background-radius: 15;
 }
 
+.button:armed{
+    -fx-opacity: 0.6;
+}
 
 .button:hover {
     -fx-background-color: derive(#00ffad, -20%);
