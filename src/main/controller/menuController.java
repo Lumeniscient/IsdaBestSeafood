@@ -2,12 +2,9 @@ package controller;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import models.manageInventory;
 import models.product;
@@ -18,7 +15,8 @@ public class menuController {
     @FXML private TableColumn<product, String> colName;
     @FXML private TableColumn<product, Double> colPrice;
     @FXML private TableColumn<product, Integer> colStock;
-    @FXML private TextField txtName, txtPrice, txtStock;
+    @FXML private TextField txtName, txtPrice, txtStock, txtSearchName;
+    @FXML private Button btnExitSearch;
 
     manageInventory inventory = new manageInventory();
 
@@ -30,6 +28,7 @@ public class menuController {
 
         inventory.addProduct(new product("Sizzling Bangus", 280, 23));
         inventory.addProduct(new product("Calamaris", 389, 14));
+        inventory.sortProduct();
         refresh();
 
     }
@@ -47,7 +46,45 @@ public class menuController {
         txtName.clear();
         txtStock.clear();
         txtPrice.clear();
-
+        inventory.sortProduct();
         refresh();
     }
+
+    @FXML
+    private void handleDelete(){
+        String selected = tblMenu.getSelectionModel().getSelectedItem().getProductName();
+        inventory.removeProduct(selected);
+        txtName.clear();
+        refresh();
+    }
+
+    @FXML
+    private void handleEditItem(){
+        product selected = tblMenu.getSelectionModel().getSelectedItem();
+    }
+
+    @FXML
+    private void handleSaveEdit(){
+        product selected = tblMenu.getSelectionModel().getSelectedItem();
+    }
+
+    @FXML
+    private void handleSearch(){
+        String name = txtSearchName.getText();
+        int index = inventory.searchProduct(name);
+
+        if (index != -1 || name == null){
+            product found = inventory.getInventory().get(index);
+            tblMenu.setItems(FXCollections.observableArrayList(found));
+        }
+        else {
+            // Make alert here
+            refresh();
+        }
+
+        btnExitSearch.setOnMouseReleased(e -> refresh());
+        btnExitSearch.setOnMouseClicked(e -> txtName.clear());
+
+    }
+
 }

@@ -13,8 +13,10 @@ public class manageInventory {
     // adds a product in the inventory
     public void addProduct(product f){
         inventory.add(f);
+    }
 
-        // sorts the inventory by name
+    // sorts the inventory by name
+    public void sortProduct(){
         inventory.sort(new Comparator<product>() {
             @Override
             public int compare(product a, product b) {
@@ -22,13 +24,11 @@ public class manageInventory {
             }
         });
     }
-
     // removes/deletes a product in the inventory
     public void removeProduct(String prodName){
         int prodLoc = searchProduct(prodName);
             if (prodLoc >= 0){
                 inventory.remove(prodLoc);
-                System.out.println(prodName + " removed.");
             }
 
     }
@@ -39,6 +39,14 @@ public class manageInventory {
     }
 
     // adding updateProduct() soon....
+    public void updateProduct(String prodName, double prodPrice, int prodStock){
+        ArrayList<product> a = inventory;
+
+        int nameIndex = inventory.indexOf(prodName);
+        int priceIndex = inventory.indexOf(prodPrice);
+        int stockIndex = inventory.indexOf(prodStock);
+
+    }
 
     // search product using binary search (halin sa DataStruc BST)
     public int searchProduct(String targetProduct){
