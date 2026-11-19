@@ -19,15 +19,17 @@ public class loginController {
     private void handleLogin() throws IOException {
         String username = txtUsername.getText().trim();
         String password = txtPassword.getText();
-        Stage stage = (Stage) txtUsername.getScene().getWindow();
+        Stage stage = new Stage();
         if (username.equals("Admin") && password.equals("A123")) {
             user admin = new userAdmin(username, password);
             admin.accessDashboard(stage);
-
+            txtUsername.getScene().getWindow().hide();
         } else if (username.equals("Staff") && password.equals("S123")) {
             user staff = new userStaff(username, password);
             staff.accessDashboard(stage);
         }
 
     }
+
+
 }

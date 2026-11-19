@@ -52,7 +52,7 @@
                         <Insets />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnNewOrder" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="267.0" text="  New Order">
+                  <Button fx:id="btnNewOrder" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleOrder" prefHeight="45.0" prefWidth="267.0" text="  New Order">
                      <font>
                         <Font name="Inter Semi Bold" size="19.0" />
                      </font>
@@ -80,7 +80,7 @@
                            </image></ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnSales" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="267.0" text="  Sales">
+                  <Button fx:id="btnSales" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleSales" prefHeight="45.0" prefWidth="267.0" text="  Sales">
                      <font>
                         <Font name="Inter Semi Bold" size="19.0" />
                      </font>
@@ -96,7 +96,7 @@
                   </Button>
                </children>
             </VBox>
-            <Button layoutY="676.0" mnemonicParsing="false" style="-fx-background-color: tramsparent;" text="Log out" textFill="WHITE">
+            <Button layoutY="676.0" mnemonicParsing="false" onAction="#HandleLogout" style="-fx-background-color: tramsparent; -fx-text-fill: white;" text="Log out" textFill="WHITE">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>

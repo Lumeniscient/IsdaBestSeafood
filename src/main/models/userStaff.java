@@ -15,7 +15,7 @@ public class userStaff extends user{
     @Override
     public void accessDashboard(Stage stage) throws IOException {
         stage.setTitle("Staff Dashboard");
-        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(userAdmin.class.getResource("/app/cashierDashboard.fxml")))));
+        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(userAdmin.class.getResource("/app/staffDashboard.fxml")))));
         stage.centerOnScreen();
 
         stage.show();

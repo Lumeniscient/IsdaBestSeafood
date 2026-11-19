@@ -45,10 +45,30 @@ public class dashboardController{
 
     @FXML
     public void handleMenu() throws IOException {
-        Stage stage = (Stage) btnMenu.getScene().getWindow();
+        Stage stage = new Stage();
         user.switchScene(stage, "/app/menu.fxml");
-
+        btnDashboard.getScene().getWindow().hide();
     }
 
+    @FXML
+    private void HandleLogout() throws IOException {
+        Stage stage = new Stage();
+        user.switchScene(stage, "/app/login.fxml");
+        btnDashboard.getScene().getWindow().hide();
+    }
+
+    @FXML
+    private void handleOrder() throws IOException {
+        Stage stage = new Stage();
+        user.switchScene(stage, "/app/newOrder.fxml");
+        btnDashboard.getScene().getWindow().hide();
+    }
+
+    @FXML
+    private void handleSales() throws IOException {
+        Stage stage = new Stage();
+        user.switchScene(stage, "/app/sales.fxml");
+        btnDashboard.getScene().getWindow().hide();
+    }
 }
 
