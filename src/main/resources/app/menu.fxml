@@ -85,7 +85,7 @@
                 </VBox>
                 <Button layoutY="676.0" mnemonicParsing="false" style="-fx-background-color: tramsparent;" text="Log out" textFill="WHITE">
                     <font>
-                        <Font name="Inter Regular" size="22.0" />
+                        <Font name="Berlin Sans FB" size="22.0" />
                     </font>
                     <graphic>
                         <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
