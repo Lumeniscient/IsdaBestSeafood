@@ -4,21 +4,27 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 
 import models.manageInventory;
 import models.product;
+import controller.dashboardController;
 
+import java.io.IOException;
+import java.util.Objects;
 
 public class menuController {
     @FXML private TableView<product> tblMenu;
     @FXML private TableColumn<product, String> colName;
     @FXML private TableColumn<product, Double> colPrice;
     @FXML private TableColumn<product, Integer> colStock;
-    @FXML private TextField txtName, txtPrice, txtStock, txtSearchName, txtEditName, txtEditPrice, txtEditStock;
-    @FXML private Button btnExitSearch, btnSaveItem, btnCancelEdit;
+    @FXML private TextField txtName, txtPrice, txtStock, txtSearchName, txtEditName, txtEditPrice, txtEditStock, txtUser;
+    @FXML private Button btnExitSearch, btnSaveItem, btnCancelEdit, btnDashboard, btnMenu, btnSales, btnNewOrder;
 
     manageInventory inventory = new manageInventory();
+    dashboardController dashboard = new dashboardController();
+    loginController user = new loginController();
 
     @FXML
     public void initialize(){
@@ -26,10 +32,10 @@ public class menuController {
         colPrice.setCellValueFactory(c->new SimpleDoubleProperty(c.getValue().getProductPrice()).asObject());
         colStock.setCellValueFactory(c->new SimpleIntegerProperty(c.getValue().getProductStock()).asObject());
 
+
         btnExitSearch.setVisible(false);
         btnCancelEdit.setDisable(true);
         btnSaveItem.setDisable(true);
-
         txtSearchName.setFocusTraversable(false);
 
         inventory.addProduct(new product("Sizzling Bangus", 280, 23));

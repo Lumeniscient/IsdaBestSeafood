@@ -14,17 +14,15 @@ import java.io.IOException;
 
 import java.util.Objects;
 
-public class dashboardController extends loginController{
+public class dashboardController{
     @FXML Button btnDashboard, btnNewOrder, btnMenu, btnSales;
-    loginController user = new loginController();
-
-
 
     void accessMenu(Stage stage) throws IOException {
         stage.setTitle("Menu");
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(userAdmin.class.getResource("/app/menu.fxml")))));
         stage.centerOnScreen();
         stage.show();
+
     }
 
     public void handleMenu() throws IOException {
@@ -32,6 +30,7 @@ public class dashboardController extends loginController{
         accessMenu(stage);
 
     }
+
 
 }
 

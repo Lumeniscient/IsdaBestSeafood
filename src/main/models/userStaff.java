@@ -17,6 +17,7 @@ public class userStaff extends user{
         stage.setTitle("Staff Dashboard");
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(userAdmin.class.getResource("/app/cashierDashboard.fxml")))));
         stage.centerOnScreen();
+
         stage.show();
     }
 }
