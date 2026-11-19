@@ -4,11 +4,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 
+import javafx.stage.Stage;
 import models.manageInventory;
 import models.product;
+import models.userManager;
 import controller.dashboardController;
 
 import java.io.IOException;
@@ -24,10 +25,10 @@ public class menuController {
 
     manageInventory inventory = new manageInventory();
     dashboardController dashboard = new dashboardController();
-    loginController user = new loginController();
+    userManager user = new userManager();
 
     @FXML
-    public void initialize(){
+    private void initialize(){
         colName.setCellValueFactory(c->new SimpleStringProperty(c.getValue().getProductName()));
         colPrice.setCellValueFactory(c->new SimpleDoubleProperty(c.getValue().getProductPrice()).asObject());
         colStock.setCellValueFactory(c->new SimpleIntegerProperty(c.getValue().getProductStock()).asObject());
@@ -44,6 +45,14 @@ public class menuController {
         refresh();
 
     }
+
+    @FXML
+    private void handleDashboard() throws IOException {
+        dashboard.setRole("Admin");
+        Stage stage = (Stage) btnDashboard.getScene().getWindow();
+        user.switchScene(stage, "/app/adminDashboard.fxml");
+    }
+
     private void refresh(){
         tblMenu.getItems().setAll(inventory.getInventory());
         tblMenu.refresh();

@@ -17,8 +17,8 @@ public class userAdmin extends user{
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(userAdmin.class.getResource("/app/adminDashboard.fxml")));
         Scene scene = new Scene(loader.load());
 
-        dashboardController controller= loader.getController();
-
+        dashboardController controller = loader.getController();
+        controller.setRole("Admin");
         stage.setTitle("Admin Dashboard");
         stage.setScene(scene);
         stage.centerOnScreen();

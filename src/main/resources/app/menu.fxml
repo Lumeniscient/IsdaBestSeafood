@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(255 255 255 / 0);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuController" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(255 255 255 / 0);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuController">
     <children>
         <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="733.0" prefWidth="295.0" style="-fx-background-color: #0f3b6c; -fx-background-radius: 15 0 0 15;" stylesheets="@styles.css" AnchorPane.topAnchor="0.0">
             <children>
@@ -32,7 +32,7 @@
                 </Label>
                 <VBox layoutX="15.0" layoutY="111.0" prefHeight="157.0" prefWidth="266.0">
                     <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="267.0" text="  Dashboard">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="45.0" prefWidth="267.0" text="  Dashboard">
                             <font>
                                 <Font name="Berlin Sans FB" size="19.0" />
                             </font>
@@ -196,17 +196,17 @@
                         </TextField>
                      </children>
                   </VBox>
-                  <Button layoutX="19.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleEditItem" prefHeight="35.0" prefWidth="112.0" style="-fx-background-radius: 5;" text="Edit Item">
+                  <Button layoutX="19.0" layoutY="166.0" mnemonicParsing="false" onAction="#handleEditItem" prefHeight="35.0" prefWidth="112.0" style="-fx-background-radius: 5;" text="Edit Item">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSaveItem" layoutX="141.0" layoutY="162.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" style="-fx-background-radius: 5;" text="Save Edit">
+                  <Button fx:id="btnSaveItem" layoutX="141.0" layoutY="166.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" style="-fx-background-radius: 5;" text="Save Edit">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnCancelEdit" layoutX="261.0" layoutY="162.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" style="-fx-background-radius: 5;" text="Cancel Edit">
+                  <Button fx:id="btnCancelEdit" layoutX="261.0" layoutY="166.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" style="-fx-background-radius: 5;" text="Cancel Edit">
                      <font>
                         <Font size="16.0" />
                      </font>

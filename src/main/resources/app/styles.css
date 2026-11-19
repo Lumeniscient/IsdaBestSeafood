@@ -1,6 +1,7 @@
 .button {
     -fx-background-color: #00ffad;
     -fx-background-radius: 15;
+    -fx-text-fill: black;
 }
 
 .button:armed{

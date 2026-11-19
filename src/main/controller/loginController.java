@@ -14,9 +14,6 @@ public class loginController {
 
 
     @FXML private TextField txtUsername, txtPassword;
-    public TextField getTxtUsername() {
-        return txtUsername;
-    }
 
     @FXML
     private void handleLogin() throws IOException {

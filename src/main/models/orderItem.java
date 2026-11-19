@@ -1,5 +1,4 @@
 package models;
-import models.product;
 
 public class orderItem {
     private product orderProduct;
@@ -20,5 +19,9 @@ public class orderItem {
 
     public double getSubtotal(){
         return orderProduct.getProductPrice() * quantity;
+    }
+
+    public String toString(){
+        return String.format("%s ×%d = ₱%.2f", orderProduct.getProductName(), quantity, getSubtotal());
     }
 }

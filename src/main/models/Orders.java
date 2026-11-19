@@ -3,15 +3,30 @@ import models.orderItem;
 import java.util.ArrayList;
 
 public class Orders {
-    public ArrayList<orderItem> getItems() {
-        return items;
+    public ArrayList<orderItem> getOrders() {
+        return orders;
     }
 
-    private ArrayList<orderItem> items = new ArrayList<>();
+    private ArrayList<orderItem> orders = new ArrayList<>();
 
-    public ArrayList<orderItem> getOrders(){
-        return items;
+    public void addOrder(orderItem order){
+        orders.add(order);
     }
 
+    public void removeOrder(orderItem order){
+        orders.remove(order);
+    }
 
+    public double getTotal(){
+        double total = 0;
+        for (orderItem item: orders){
+            total += item.getSubtotal();
+        }
+
+        return total;
+    }
+
+    public void clear(){
+        orders.clear();
+    }
 }

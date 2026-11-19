@@ -1,5 +1,8 @@
 package models;
 
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -11,14 +14,6 @@ abstract public class user {
     user(String username, String password){
         this.username = username;
         this.password = password;
-    }
-
-    public String getRole(){
-        return username;
-    }
-
-    public String getPassword(){
-        return password;
     }
 
 
