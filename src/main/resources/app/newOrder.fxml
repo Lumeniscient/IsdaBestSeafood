@@ -120,12 +120,12 @@
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <ListView layoutX="629.0" layoutY="124.0" prefHeight="503.0" prefWidth="363.0" style="-fx-background-radius: 10;" />
-            <Button layoutX="643.0" layoutY="636.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="159.0" style="-fx-background-radius: 5;" text="Delete Order">
+            <ListView fx:id="lstOrderList" layoutX="629.0" layoutY="124.0" prefHeight="503.0" prefWidth="363.0" style="-fx-background-radius: 10;" />
+            <Button layoutX="643.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="35.0" prefWidth="159.0" style="-fx-background-radius: 5;" text="Delete Order">
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <Button layoutX="819.0" layoutY="636.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="159.0" style="-fx-background-radius: 5;" text="Confirm Order">
+            <Button layoutX="819.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="35.0" prefWidth="159.0" style="-fx-background-radius: 5;" text="Confirm Order">
                <font>
                   <Font size="15.0" />
                </font>

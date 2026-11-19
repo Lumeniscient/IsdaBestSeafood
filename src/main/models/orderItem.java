@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Comparator;
+
 public class orderItem {
     private product orderProduct;
     private int quantity;
@@ -20,6 +22,7 @@ public class orderItem {
     public double getSubtotal(){
         return orderProduct.getProductPrice() * quantity;
     }
+
 
     public String toString(){
         return String.format("%s ×%d = ₱%.2f", orderProduct.getProductName(), quantity, getSubtotal());

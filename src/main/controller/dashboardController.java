@@ -1,6 +1,7 @@
 package controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import models.userAdmin;
@@ -15,15 +16,23 @@ import javafx.scene.control.*;
 import java.io.IOException;
 import java.util.Objects;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 
 public class dashboardController{
     @FXML Button btnDashboard, btnNewOrder, btnMenu, btnSales;
+    @FXML Label lblDate;
 
     userManager user = new userManager();
 
-//    public void initialize(){
-//        setRole("Admin");
-//    }
+    public void initialize(){
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy");
+        String formattedDate = today.format(formatter);
+        lblDate.setFont(Font.font("Berlin Sans FB", 15));
+        lblDate.setText(formattedDate);
+    }
 
     public void setRole(String role){
         if (role.equals("Admin")){

@@ -3,9 +3,11 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import models.manageInventory;
+import models.orderItem;
 import models.product;
 import models.Orders;
 
@@ -15,8 +17,10 @@ public class newOrderController {
     @FXML private TableColumn<product, Double> colPrice;
     @FXML private TableColumn<product, Integer> colStock;
     @FXML private TextField txtQuantity;
+    @FXML private ListView<orderItem> lstOrderList;
 
     manageInventory inventory = new manageInventory();
+    Orders orders = new Orders();
     @FXML
     private void initialize(){
         colName.setCellValueFactory(c->new SimpleStringProperty(c.getValue().getProductName()));
@@ -30,31 +34,46 @@ public class newOrderController {
 
     }
     private void refresh(){
-        tblOrder.getItems().setAll(inventory.getInventory());
-        tblOrder.refresh();
+        tblOrder.getItems().setAll(inventory.getInventory());;
+        lstOrderList.getItems().setAll(orders.getOrders());
     }
 
     @FXML
     private void handleAdd(){
         try {
             int quantity = Integer.parseInt(txtQuantity.getText().trim());
+            product selected = tblOrder.getSelectionModel().getSelectedItem();
+
 
             if (quantity <= 0){
-                showAlert(Alert.AlertType.WARNING, "Invalid Stock", "Stock must be a 0 or negative number.");
+                showAlert(Alert.AlertType.WARNING, "Invalid Quantity", "Quantity must be a 0 or negative number.");
                 return;
             }else {
-                inventory.addProduct(new product(name, price, stock));
+                orders.addOrder(new orderItem(selected, quantity));
+                lstOrderList.setItems((FXCollections.observableArrayList(orders.getOrders())));
+
             }
-            txtName.clear();
-            txtStock.clear();
-            txtPrice.clear();
-            inventory.sortProduct();
+            txtQuantity.clear();
             refresh();
 
         } catch (NumberFormatException e){
             showAlert(Alert.AlertType.ERROR, "Invalid input",
                     "Product price and product Stock must be a number");
         }
+    }
+
+    @FXML
+    public void handleDelete(){
+        orderItem selected = lstOrderList.getSelectionModel().getSelectedItem();
+        orders.removeOrder(selected);
+        txtQuantity.clear();
+        refresh();
+    }
+
+    @FXML
+    public void handleConfirm(){
+        orders.clear();
+        refresh();
     }
 
     private void showAlert(Alert.AlertType type, String title, String message) {

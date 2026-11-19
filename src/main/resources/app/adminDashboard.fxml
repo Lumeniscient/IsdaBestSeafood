@@ -124,9 +124,9 @@
                         <Font name="Inter Semi Bold" size="38.0" />
                      </font>
                   </Label>
-                  <Label text="Wednesday, November 11, 2026">
+                  <Label fx:id="lblDate" text="Wednesday, November 11, 2026">
                      <font>
-                        <Font name="Inter Semi Bold" size="15.0" />
+                        <Font name="Berlin Sans FB" size="15.0" />
                      </font></Label>
                </children>
             </VBox>

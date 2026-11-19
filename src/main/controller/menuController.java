@@ -114,6 +114,8 @@ public class menuController {
             btnSaveItem.setDisable(false);
 
             btnSaveItem.setOnMouseClicked(e -> {
+                btnCancelEdit.setDisable(true);
+                btnSaveItem.setDisable(true);
                 String name = txtEditName.getText();
 
                 if (name.isEmpty()) {

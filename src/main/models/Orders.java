@@ -1,6 +1,7 @@
 package models;
 import models.orderItem;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Orders {
     public ArrayList<orderItem> getOrders() {
@@ -25,6 +26,7 @@ public class Orders {
 
         return total;
     }
+
 
     public void clear(){
         orders.clear();
