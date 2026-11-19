@@ -191,11 +191,6 @@
                 </Pane>
                 <Pane layoutX="687.0" layoutY="420.0" prefHeight="65.0" prefWidth="314.0" style="-fx-background-color: white; -fx-background-radius: 15;">
                     <children>
-                        <Label layoutX="14.0" layoutY="2.0" prefWidth="301.0" text="Today's Order">
-                            <font>
-                                <Font name="Inter Regular" size="16.0" />
-                            </font>
-                        </Label>
                         <Label layoutX="11.0" layoutY="25.0" prefHeight="0.0" prefWidth="329.0" text="₱0">
                             <font>
                                 <Font name="Inter Semi Bold" size="26.0" />
