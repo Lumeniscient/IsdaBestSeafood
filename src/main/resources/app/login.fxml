@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="381.0" maxWidth="418.0" minHeight="-Infinity" minWidth="271.0" prefHeight="377.0" prefWidth="418.0" style="-fx-background-color: #ADEFD1; -fx-background-radius: 20;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loginController">
+<AnchorPane maxHeight="381.0" maxWidth="418.0" minHeight="-Infinity" minWidth="271.0" prefHeight="377.0" prefWidth="418.0" style="-fx-background-color: skyblue; -fx-background-radius: 20;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loginController">
    <children>
       <Pane layoutX="11.0" layoutY="16.0" prefHeight="136.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 10;">
          <children>

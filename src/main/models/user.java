@@ -7,9 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-abstract public class user {
+ public abstract class user {
     private String username;
     private String password;
+
 
     user(String username, String password){
         this.username = username;

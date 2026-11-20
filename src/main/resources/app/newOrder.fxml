@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
@@ -9,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(255 255 255 / 0);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.newOrderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgb(255 255 255 / 0);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.newOrderController">
     <children>
         <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="732.0" prefWidth="295.0" style="-fx-background-color: #0f3b6c; -fx-background-radius: 15 0 0 15;" AnchorPane.topAnchor="0.0">
             <children>
@@ -33,7 +32,7 @@
                 </Label>
                 <VBox layoutX="15.0" layoutY="111.0" prefHeight="228.0" prefWidth="266.0">
                     <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="267.0" style="-fx-background-color: #00ffad; -fx-background-radius: 15; -fx-cursor: HAND;" text="  Dashboard">
+                        <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="45.0" prefWidth="267.0" text="  Dashboard">
                             <font>
                                 <Font name="Inter Semi Bold" size="19.0" />
                             </font>
@@ -53,7 +52,7 @@
                                 <Insets />
                             </VBox.margin>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="267.0" style="-fx-background-color: #00ffad; -fx-background-radius: 15; -fx-cursor: HAND;" text="  New Order">
+                        <Button fx:id="btnNewOrder" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="267.0" text="  New Order">
                             <font>
                                 <Font name="Inter Semi Bold" size="19.0" />
                             </font>
@@ -67,9 +66,39 @@
                                     </image></ImageView>
                             </graphic>
                         </Button>
+                  <Button fx:id="btnMenu" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleMenu" prefHeight="45.0" prefWidth="267.0" text="  Menu">
+                     <font>
+                        <Font name="Inter Semi Bold" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../menu_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnSales" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleSales" prefHeight="45.0" prefWidth="267.0" text="Sales">
+                     <font>
+                        <Font name="Inter Semi Bold" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sales_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
                     </children>
                 </VBox>
-                <Button layoutY="676.0" mnemonicParsing="false" style="-fx-background-color: tramsparent;" text="Log out" textFill="WHITE">
+                <Button layoutY="676.0" mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Log out" textFill="WHITE">
                     <font>
                         <Font name="Inter Regular" size="22.0" />
                     </font>
@@ -97,17 +126,12 @@
                                 <Font name="Berlin Sans FB" size="38.0" />
                             </font>
                         </Label>
-                        <Label text="Wednesday, November 11, 2026">
+                        <Label fx:id="lblDate" text="Wednesday, November 11, 2026">
                             <font>
                                 <Font name="Inter Semi Bold" size="15.0" />
                             </font></Label>
                     </children>
                 </VBox>
-                <Button layoutX="964.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0f3b6c; -fx-background-radius: 5;" text="×" textFill="WHITE">
-                    <font>
-                        <Font name="Inter Semi Bold" size="18.0" />
-                    </font>
-                </Button>
             <TableView fx:id="tblOrder" layoutX="32.0" layoutY="100.0" prefHeight="571.0" prefWidth="583.0" style="-fx-background-radius: 10;">
               <columns>
                 <TableColumn fx:id="colName" prefWidth="342.0" text="Name" />
@@ -125,15 +149,11 @@
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <Button layoutX="819.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="35.0" prefWidth="159.0" style="-fx-background-radius: 5;" text="Confirm Order">
+            <Button fx:id="btnConfirm" layoutX="819.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="35.0" prefWidth="159.0" style="-fx-background-radius: 5;" text="Confirm Order">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
             </children></Pane>
     </children>
-   <stylesheets>
-      <URL value="@styles.css" />
-      <URL value="@styles.css" />
-   </stylesheets>
 </AnchorPane>

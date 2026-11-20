@@ -6,26 +6,27 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import models.manageInventory;
 import models.product;
 import models.userManager;
-import controller.dashboardController;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
-public class menuController {
+public class menuController extends userManager {
     @FXML private TableView<product> tblMenu;
     @FXML private TableColumn<product, String> colName;
     @FXML private TableColumn<product, Double> colPrice;
     @FXML private TableColumn<product, Integer> colStock;
-    @FXML private TextField txtName, txtPrice, txtStock, txtSearchName, txtEditName, txtEditPrice, txtEditStock, txtUser;
+    @FXML private TextField txtName, txtPrice, txtStock, txtSearchName, txtEditName, txtEditPrice, txtEditStock;
     @FXML private Button btnExitSearch, btnSaveItem, btnCancelEdit, btnDashboard, btnMenu, btnSales, btnNewOrder;
+    @FXML private Label lblDate;
 
-    manageInventory inventory = new manageInventory();
-    dashboardController dashboard = new dashboardController();
-    userManager user = new userManager();
+    manageInventory inventory = manageInventory.getInstance();
 
     @FXML
     private void initialize(){
@@ -33,24 +34,68 @@ public class menuController {
         colPrice.setCellValueFactory(c->new SimpleDoubleProperty(c.getValue().getProductPrice()).asObject());
         colStock.setCellValueFactory(c->new SimpleIntegerProperty(c.getValue().getProductStock()).asObject());
 
-
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy");
+        lblDate.setText(today.format(formatter));
         btnExitSearch.setVisible(false);
         btnCancelEdit.setDisable(true);
         btnSaveItem.setDisable(true);
         txtSearchName.setFocusTraversable(false);
 
-        inventory.addProduct(new product("Sizzling Bangus", 280, 23));
-        inventory.addProduct(new product("Calamaris", 389, 14));
-        inventory.sortProduct();
-        refresh();
 
+        if (getRole().equals("Staff")) {
+            btnMenu.setVisible(false);
+            btnSales.setVisible(false);
+        }
+        btnDashboard.setDisable(false);
+        btnMenu.setDisable(true);
+        btnNewOrder.setDisable(false);
+        btnSales.setDisable(false);
+
+    refresh();
     }
 
     @FXML
     private void handleDashboard() throws IOException {
-        dashboard.setRole("Admin");
+        if (Objects.equals(getRole(), "Admin")){
+            Stage stage = (Stage) txtSearchName.getScene().getWindow();
+            switchScene(stage, "/app/dashboard.fxml");
+        }else{
+            showAlert(Alert.AlertType.INFORMATION, "Access Blocked", "Permission Denied");
+        }
+
+    }
+
+    @FXML
+    private void handleMenu() {}
+
+    @FXML
+    private void handleNewOrder() throws IOException {
+        if (Objects.equals(getRole(), "Admin")){
+            Stage stage = (Stage) txtSearchName.getScene().getWindow();
+            switchScene(stage, "/app/newOrder.fxml");
+        }else if (Objects.equals(getRole(), "Staff")){
+            Stage stage = (Stage) txtSearchName.getScene().getWindow();
+            switchScene(stage, "/app/newOrder.fxml");
+        }
+    }
+
+    @FXML
+    private void handleSales() throws IOException {
+        if (Objects.equals(getRole(), "Admin")){
+            Stage stage = (Stage) txtSearchName.getScene().getWindow();
+            switchScene(stage, "/app/sales.fxml");
+        }else if (Objects.equals(getRole(), "Staff")){
+            Stage stage = (Stage) txtSearchName.getScene().getWindow();
+            switchScene(stage, "/app/sales.fxml");
+        }
+    }
+
+    @FXML
+    private void handleLogout() throws IOException {
         Stage stage = (Stage) btnDashboard.getScene().getWindow();
-        user.switchScene(stage, "/app/adminDashboard.fxml");
+        switchScene(stage, "/app/login.fxml");
+
     }
 
     private void refresh(){
@@ -71,7 +116,7 @@ public class menuController {
             int stock = Integer.parseInt(txtStock.getText().trim());
 
             if (stock <= 0){
-                showAlert(Alert.AlertType.WARNING, "Invalid Stock", "Stock must be a 0 or negative number.");
+                showAlert(Alert.AlertType.WARNING, "Invalid Stock", "Stock must be greater than 0.");
                 return;
             }else {
                 inventory.addProduct(new product(name, price, stock));
@@ -127,7 +172,7 @@ public class menuController {
                     int stock = Integer.parseInt(txtEditStock.getText().trim());
 
                     if (stock <= 0){
-                        showAlert(Alert.AlertType.WARNING, "Invalid Stock", "Stock must be a 0 or negative number.");
+                        showAlert(Alert.AlertType.WARNING, "Invalid Stock", "Stock must be greater than 0.");;
                         return;
                     }else {
                         inventory.updateProduct(selected, name, price, stock);

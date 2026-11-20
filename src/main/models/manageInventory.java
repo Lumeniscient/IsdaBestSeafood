@@ -8,7 +8,15 @@ public class manageInventory {
 
     // our inventory that contains our products
     private ArrayList<product> inventory = new ArrayList<>();
-    private double earnings;
+
+    private static manageInventory instance;
+
+    public static manageInventory getInstance() {
+        if (instance == null) {
+            instance = new manageInventory();
+        }
+        return instance;
+    }
 
     // adds a product in the inventory
     public void addProduct(product f){

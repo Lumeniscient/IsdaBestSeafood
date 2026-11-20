@@ -27,4 +27,5 @@ public class orderItem {
     public String toString(){
         return String.format("%s ×%d = ₱%.2f", orderProduct.getProductName(), quantity, getSubtotal());
     }
+
 }
