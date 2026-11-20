@@ -46,7 +46,10 @@ public class dashboardController extends userManager{
 
         if (inventory.getInventory().isEmpty()) {
             inventory.addProduct(new product("Sizzling Bangus", 280, 23));
-            inventory.addProduct(new product("Calamaris", 389, 14));
+            inventory.addProduct(new product("Calamaris", 430, 12));
+            inventory.addProduct(new product("Daing na Bangus", 389, 14));
+            inventory.addProduct(new product("Sweet and Sour Fish Fillet", 380, 5));
+            inventory.addProduct(new product("Salt and Pepper Fish", 350, 27));
             inventory.sortProduct();
         }
         int totalOrders = transactions.getTransactionHistory().size();
