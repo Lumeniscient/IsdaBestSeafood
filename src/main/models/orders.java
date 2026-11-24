@@ -1,10 +1,21 @@
 package models;
+import javax.swing.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
+import models.orderItem;
 
 public class orders extends transactions{
     private int totalOrders = 0;
     public ArrayList<orderItem> orderList = new ArrayList<>();
+
+
+    @Override
+    public double computeTotal() {
+        double total = 0;
+        for (orderItem item : orderList) total += item.getSubtotal();
+        return total;
+    }
 
     public ArrayList<orderItem> getOrders() {
         return orderList;
@@ -38,13 +49,6 @@ public class orders extends transactions{
         orderList.remove(order);
     }
 
-    @Override
-    public double computeTotal() {
-        double total = 0;
-        for (orderItem item : orderList) total += item.getSubtotal();
-        return total;
-    }
-
     public void confirm() {
         totalOrders++;
         for (orderItem item : orderList) {
@@ -52,6 +56,10 @@ public class orders extends transactions{
             item.getOrderProduct().setStock(newStock);
         }
         transactions.addTransaction(new ArrayList<>(orderList));
+
+        String receipt = orderList.stream().map(Object::toString).collect(Collectors.joining("\n"));
+        String message = receipt + "\n--------------------\nTotal: ₱" + String.format("%.2f", computeTotal());
+        JOptionPane.showMessageDialog(null, message, "Receipt", JOptionPane.INFORMATION_MESSAGE);
         orderList.clear();
     }
     public void clear(){
