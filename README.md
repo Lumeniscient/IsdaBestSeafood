@@ -52,7 +52,7 @@ access and responsibilities to ensure organized and secure store operations.
 | **Inheritance** | `userAdmin`, `userStaff` extend `user`; controllers extend `userManager` |
 | **Abstraction** | `transactions` is an abstract class with an abstract `computeTotal()` method |
 | **Encapsulation** | All models (`product`, `orderItem`, `orders`) use private fields with getters/setters |
-| **Singleton Pattern** | `manageInventory` and `orders` use `getInstance()` to maintain a single shared state |
+| **Polymorphism** | `user` subclasses ('userAdmin', 'userStaff') override 'accessDashboard()' to load the same screen with role-specific behavior |
 
 ---
 
